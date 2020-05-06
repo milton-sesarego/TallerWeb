@@ -20,7 +20,7 @@ namespace WebAPIClientes
         }
 
         // POST api/<controller>
-        public void Post([FromBody]Cliente cliente)
+        public Error Post([FromBody]Cliente cliente)
         {
             //Para revertir que ajax transforma "" en null
             if (cliente.Nombre == null) {cliente.Nombre = "";}
@@ -29,11 +29,11 @@ namespace WebAPIClientes
             if (cliente.Fecha_Nac == null){ cliente.Fecha_Nac = "";}
             if (cliente.Direccion == null){ cliente.Direccion = "";}
 
-            ClientesManager.Guardar(cliente);
+            return ClientesManager.Guardar(cliente); ;
         }
 
         // PUT api/<controller>/5
-        public void Put([FromBody]Cliente cliente)
+        public Error Put([FromBody]Cliente cliente)
         {
             //Para revertir que ajax transforma "" en null
             if (cliente.Nombre == null) { cliente.Nombre = ""; }
@@ -42,7 +42,7 @@ namespace WebAPIClientes
             if (cliente.Fecha_Nac == null) { cliente.Fecha_Nac = ""; }
             if (cliente.Direccion == null) { cliente.Direccion = ""; }
 
-            ClientesManager.Guardar(cliente);
+            return ClientesManager.Guardar(cliente);
         }
 
         // DELETE api/<controller>/5

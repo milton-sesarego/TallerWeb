@@ -3,64 +3,64 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/clientes.js"></script>
 </head>
 <body>
-    <a href="productos.html">Ir a Productos</a>
-    <h3>Datos del Cliente</h3>
-    <form id="myform" onsubmit="return false">
-        <table class="tbl-input">
-            <tr>
-                <td>
-                    <span id="lblNombre">Nombre</span>
-                </td>
-                <td>
-                    <input id="txtNombre" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span id="lblApellido">Apellido</span>
-                </td>
-                <td>
-                    <input id="txtApellido" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span id="lblFecha">Fecha de Nacimiento</span>
-                </td>
-                <td>
-                    <input id="txtFecha" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span id="lblDocumento">Numero de Documento</span>
-                </td>
-                <td>
-                    <input id="txtDocumento" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span id="lblDireccion">Direccion</span>
-                </td>
-                <td>
-                    <input id="txtDireccion" type="text" />
-                </td>
-            </tr>
-        </table>
-        <br />
-        <button id="btnGuardar">Nuevo</button>
-        <button id="btnCancelar">Cancelar</button>
-        <button id="btnBuscar">Buscar</button>
-        <button id="btnEliminar" class="btn-danger">Eliminar</button>
-        <br />
-        <br />
-        <div id="grdClientes"></div>
-    </form>
+    
+    <ul class="nav nav-tabs bg-dark mb-3">
+        <li class="nav-item"><a class="nav-link text-light" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="clientes.html">Clientes</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="productos.html">Productos</a></li>
+    </ul>
+    
+    <div class="form-group" id="myform" onsubmit="return false">
+        <div id="mainContainer" class="container">
+            <div id="alertContainer"></div>
+            <div class="row">
+                <div class="col mb-3">
+                    <h3>Datos del Cliente</h3>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg col-md-4 col-sm-6 col-12 mb-3">
+                    <label for="txtNombre" id="lblNombre">Nombre</label>
+                    <input class="form-control" id="txtNombre" type="text" />
+                </div>
+                <div class="col-lg col-md-4 col-sm-6 col-12 mb-3">
+                    <label for="txtApellido" id="lblApellido">Apellido</label>
+                    <input class="form-control" id="txtApellido" type="text" />
+                </div>
+                <div class="col-lg col-md-4 col-sm-6 col-12 mb-3">
+                    <label for="txtFecha" id="lblFecha">Fecha de Nacimiento</label>
+                    <input class="form-control" id="txtFecha" type="text" />
+                </div>
+                <div class="col-lg col-md-4 col-sm-6 col-12 mb-3">
+                    <label for="txtDocumento" id="lblDocumento">Numero de Documento</label>
+                    <input class="form-control" id="txtDocumento" type="text" />
+                </div>
+                <div class="col-lg col-md-4 col-sm-6 col-12 mb-3">
+                    <label for="txtDireccion" id="lblDireccion">Dirección</label>
+                    <input class="form-control" id="txtDireccion" type="text" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-5">
+                    <button id="btnGuardar" class="btn btn-success mr-1">Nuevo</button>
+                    <button id="btnCancelar" class="btn btn-secondary mr-1 ">Cancelar</button>
+                    <button id="btnBuscar" class="btn btn-info mr-1">Buscar</button>
+                    <button id="btnEliminar" class="btn btn-danger mr-1">Eliminar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3 text-center">
+                    <div id="grdClientes"></div>
+                </div>
+            </div>
+        </div>
+        </div>
 </body>
 </html>

@@ -9,3 +9,14 @@ C:\Users\CASA\Source\Repos\navue\TallerWeb\BussinessLogic\bin\Debug\Domain.dll
 C:\Users\CASA\Source\Repos\navue\TallerWeb\BussinessLogic\bin\Debug\DataAccess.pdb
 C:\Users\CASA\Source\Repos\navue\TallerWeb\BussinessLogic\bin\Debug\Domain.pdb
 C:\Users\CASA\Source\Repos\navue\TallerWeb\BussinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\bin\Debug\BussinessLogic.dll
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\bin\Debug\BussinessLogic.pdb
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\bin\Debug\DataAccess.dll
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\bin\Debug\Domain.dll
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\bin\Debug\Domain.pdb
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\obj\Debug\BussinessLogic.dll
+C:\Users\CASA\Source\Repos\milton-sesarego\TallerWeb\BussinessLogic\obj\Debug\BussinessLogic.pdb

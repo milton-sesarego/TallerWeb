@@ -10,7 +10,7 @@ namespace BusinessLogic
 {
     public static class ClientesManager
     {
-        public static int Guardar(Cliente pCliente)
+        public static Error Guardar(Cliente pCliente)
         {
             // Valida que el nro de documento no se repita
             List<Cliente> lista = new List<Cliente>();
@@ -20,7 +20,7 @@ namespace BusinessLogic
                 // Si el cliente es nuevo y hay Nros de Documento repetidos
                 if (pCliente.ID == 0)
                 {
-                    return 0;
+                    return new Error(0,"Nro de documento repetido");
                 }
                 else
                 {
@@ -28,11 +28,11 @@ namespace BusinessLogic
                     // y el nro de documento repetido es diferente del cliente a modificar
                     if (lista[0].ID != pCliente.ID)
                     {
-                        return 0;
+                        return new Error(0, "Nro de documento repetido");
                     }
                 }
             }
-            return ClientesDAL.Guardar(pCliente);
+            return new Error(ClientesDAL.Guardar(pCliente), "Mensaje de la Base de Datos");
         }
         public static List<Cliente> Buscar()
         {

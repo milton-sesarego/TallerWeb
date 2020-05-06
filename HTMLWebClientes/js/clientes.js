@@ -7,8 +7,15 @@ $(function () {
     $('#btnEliminar').click(function () { borrarCliente(); });
     $('#btnCancelar').click(function () { limpiarControles(); });
     $('#btnGuardar').html("Nuevo");
-
 });
+
+function mostrarMensaje(mensaje, tipo) {
+    $('#alertContainer').fadeOut("fast", function () {
+        $('.alert').remove();
+        $('#alertContainer').hide().prepend('<div class="alert alert-' + tipo + '" role="alert">' + mensaje + '</div>')
+            .fadeIn();
+    });
+}
 
 function actualizarGrilla() {
     var data = ajaxGET();
@@ -25,7 +32,7 @@ function ajaxGET() {
     }).done(function (data) {
         result = data;
     }).error(function (xhr, status, error) {
-        alert(error);
+        mostrarMensaje(error, 'danger');
         var s = status;
         var e = error;
     });
@@ -36,7 +43,6 @@ function ajaxGET() {
 function ajaxPOST() {
     var result;
     var obj = obtenerCliente();
-
     $.ajax({
         url: myURL,
         type: 'POST',
@@ -44,20 +50,22 @@ function ajaxPOST() {
         data: obj
     }).done(function (data) {
         result = data;
-        alert('Elemento insertado')
+        if (result.codigo == 1) {
+            mostrarMensaje('Elemento insertado', 'success');
+        } else if (result.codigo == 0) {
+            mostrarMensaje(result.mensaje, 'danger');
+        }
     }).error(function (xhr, status, error) {
-        alert(error);
+        mostrarMensaje(error, 'danger');
         var s = status;
         var e = error;
     });
-
     return result;
 }
 
 function ajaxPUT() {
     var result;
     var obj = obtenerCliente();
-
     $.ajax({
         url: myURL,
         type: 'PUT',
@@ -65,48 +73,48 @@ function ajaxPUT() {
         data: obj
     }).done(function (data) {
         result = data;
-        alert('Elemento actualizado')
+        if (result.codigo == 1) {
+            mostrarMensaje('Elemento actualizado', 'success');
+        } else if (result.codigo == 0) {
+            mostrarMensaje(result.mensaje, 'danger');
+        }
     }).error(function (xhr, status, error) {
-        alert(error);
+        mostrarMensaje(error, 'danger');
         var s = status;
         var e = error;
     });
-
     return result;
 }
 
 function ajaxDELETE(id) {
     var result;
-
     $.ajax({
         url: myURL + '/' + id,
         type: 'DELETE',
         async: false
     }).done(function (data) {
         result = data;
-        alert('Elemento borrado')
+        mostrarMensaje('Elemento eliminado', 'success');
     }).error(function (xhr, status, error) {
-        alert(error);
+        mostrarMensaje(error, 'danger');
         var s = status;
         var e = error;
     });
-
     return result;
 }
 
 function construyeGrilla(data) {
     var grd = $('#grdClientes');
     grd.html("");
-    var tbl = $('<table border=1></table>');
+    var tbl = $('<table class="table table-striped table-bordered table-dark"></table>');
 
     var header = $('<tr></tr>');
-    header.append('<td>Id</td>');
-    header.append('<td>Nombre</td>');
-    header.append('<td>Apellido</td>');
-    header.append('<td>Fecha de Nacimiento</td>');
-    header.append('<td>Numero de Documento</td>');
-    header.append('<td>Direccion</td>');
-
+    header.append('<th scope="row">Id</th>');
+    header.append('<th>Nombre</th>');
+    header.append('<th>Apellido</th>');
+    header.append('<th>Fecha de Nacimiento</th>');
+    header.append('<th>Numero de Documento</th>');
+    header.append('<th>Dirección</th>');
     tbl.append(header);
 
     for (d in data) {
@@ -117,20 +125,17 @@ function construyeGrilla(data) {
         row.append('<td>' + data[d].Fecha_Nac + '</td>');
         row.append('<td>' + data[d].Nro_Doc + '</td>');
         row.append('<td>' + data[d].Direccion + '</td>');
-
         tbl.append(row);
     }
-
     grd.append(tbl);
     $('.jqClickeable').click(function () { mostrarElemento($(this)); });
-
 }
 
 function borrarCliente() {
     if (sessionStorage.getItem("IDCliente") != 0) {
         ajaxDELETE(sessionStorage.getItem("IDCliente"));
     } else {
-        alert("No hay ningún registro seleccionado");
+        mostrarMensaje('No hay ningún elemento seleccionado', 'warning');
     }
     actualizarGrilla();
     limpiarControles();
@@ -154,7 +159,6 @@ function mostrarElemento(elem) {
     $('#txtFecha').val(elem.children().eq(3).text());
     $('#txtDocumento').val(elem.children().eq(4).text());
     $('#txtDireccion').val(elem.children().eq(5).text());
-
     $('#btnGuardar').html("Modificar");
 }
 
@@ -166,7 +170,6 @@ function obtenerCliente() {
     cliente.Fecha_Nac = $('#txtFecha').val();
     cliente.Nro_Doc = $('#txtDocumento').val();
     cliente.Direccion = $('#txtDireccion').val();
-
     return cliente;
 }
 function limpiarControles() {
@@ -174,8 +177,7 @@ function limpiarControles() {
     $('#txtNombre').val("");
     $('#txtApellido').val("");
     $('#txtFecha').val("");
-    $('txtDocumento').val("");
+    $('#txtDocumento').val("");
     $('#txtDireccion').val("");
-
     $('#btnGuardar').html("Nuevo");
 }
