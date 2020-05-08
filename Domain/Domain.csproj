@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Error.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="Mensaje.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -19,11 +19,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BussinessLogic\BusinessLogic.csproj", "{928F38D3-56F0-46BD-AFEC-C582EB520458}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIClientes", "WebAPIClientes\WebAPIClientes.csproj", "{626C16DE-E195-4F6C-B558-B5E006959404}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI_Productos\WebAPI.csproj", "{6E1E4205-3CCD-4FBF-891C-C3165AC5314A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLWebApp", "HTMLWebClientes\HTMLWebApp.csproj", "{ED9D9CFB-B6D9-4A60-9894-8D80C614FB79}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{828BB506-A902-422B-AB42-02960F65DC35}"
+	ProjectSection(SolutionItems) = preProject
+		Web\clientes.html = Web\clientes.html
+		Web\pedidos.html = Web\pedidos.html
+		Web\productos.html = Web\productos.html
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi_Productos", "WebAPI_Productos\WebApi_Productos.csproj", "{6E1E4205-3CCD-4FBF-891C-C3165AC5314A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{575C9338-7C14-473A-9800-B878385DC965}"
+	ProjectSection(SolutionItems) = preProject
+		Web\js\bootstrap.min.js = Web\js\bootstrap.min.js
+		Web\js\clientes.js = Web\js\clientes.js
+		Web\js\pedidos.js = Web\js\pedidos.js
+		Web\js\productos.js = Web\js\productos.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{3E637908-D0F4-4447-AEDA-BA7AE9DD7830}"
+	ProjectSection(SolutionItems) = preProject
+		Web\css\bootstrap.min.css = Web\css\bootstrap.min.css
+		Web\css\style.css = Web\css\style.css
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +60,6 @@ Global
 		{928F38D3-56F0-46BD-AFEC-C582EB520458}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{928F38D3-56F0-46BD-AFEC-C582EB520458}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{928F38D3-56F0-46BD-AFEC-C582EB520458}.Release|Any CPU.Build.0 = Release|Any CPU
-		{626C16DE-E195-4F6C-B558-B5E006959404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{626C16DE-E195-4F6C-B558-B5E006959404}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{626C16DE-E195-4F6C-B558-B5E006959404}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{626C16DE-E195-4F6C-B558-B5E006959404}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED9D9CFB-B6D9-4A60-9894-8D80C614FB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED9D9CFB-B6D9-4A60-9894-8D80C614FB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED9D9CFB-B6D9-4A60-9894-8D80C614FB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED9D9CFB-B6D9-4A60-9894-8D80C614FB79}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6E1E4205-3CCD-4FBF-891C-C3165AC5314A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6E1E4205-3CCD-4FBF-891C-C3165AC5314A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E1E4205-3CCD-4FBF-891C-C3165AC5314A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,9 +72,10 @@ Global
 		{211F157E-B01A-4F17-A3D3-051070B23BF2} = {F5E26515-295E-49FF-A252-505EEDCB9990}
 		{66948A1E-CACA-40E1-BA64-C2A2AC3C7FFA} = {EB8D75B5-7967-464D-89F2-70D8525CA8C2}
 		{928F38D3-56F0-46BD-AFEC-C582EB520458} = {EDAB41A8-3D3C-4F1D-8050-A1232E55968E}
-		{626C16DE-E195-4F6C-B558-B5E006959404} = {77BD237D-6376-4A08-8839-B6FD02723101}
-		{ED9D9CFB-B6D9-4A60-9894-8D80C614FB79} = {05A19902-F62A-4DBF-B966-637EA4740217}
 		{6E1E4205-3CCD-4FBF-891C-C3165AC5314A} = {77BD237D-6376-4A08-8839-B6FD02723101}
+		{828BB506-A902-422B-AB42-02960F65DC35} = {05A19902-F62A-4DBF-B966-637EA4740217}
+		{575C9338-7C14-473A-9800-B878385DC965} = {828BB506-A902-422B-AB42-02960F65DC35}
+		{3E637908-D0F4-4447-AEDA-BA7AE9DD7830} = {828BB506-A902-422B-AB42-02960F65DC35}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {12527CEB-3C26-4F6E-A968-A25E84E08CF0}

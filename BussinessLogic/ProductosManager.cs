@@ -10,9 +10,9 @@ namespace BusinessLogic
 {
     public static class ProductosManager
     {
-        public static int Guardar(Producto pProducto)
+        public static Mensaje Guardar(Producto pProducto)
         {
-            return ProductosDAL.Guardar(pProducto);
+            return new Mensaje(ProductosDAL.Guardar(pProducto), "Mensaje de la Base de Datos");
         }
         public static List<Producto> Buscar()
         {

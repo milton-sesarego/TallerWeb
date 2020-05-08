@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDComun.cs" />
+    <Compile Include="PedidosDAL.cs" />
     <Compile Include="ClientesDAL.cs" />
     <Compile Include="ProductosDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

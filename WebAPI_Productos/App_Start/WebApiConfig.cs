@@ -5,7 +5,7 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Net.Http.Headers;
 
-namespace WebAPI_Productos
+namespace WebAPI
 {
     public static class WebApiConfig
     {

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/productos.js"></script>
+</head>
+<body>
+    <a href="clientes.html">Ir a Clientes</a>
+    <h3>Datos del Producto</h3>
+    <form id="myform" onsubmit="return false">
+        <table class="tbl-input">
+            <tr>
+                <td>
+                    <span id="lblNombre">Nombre</span>
+                </td>
+                <td>
+                    <input id="txtNombre" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="lblDescripcion">Descripción</span>
+                </td>
+                <td>
+                    <textarea rows="3" id="txtDescripcion"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="lblPrecio">Precio</span>
+                </td>
+                <td>
+                    <input id="txtPrecio" type="number" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="lblStock">Stock</span>
+                </td>
+                <td>
+                    <input id="txtStock" type="number" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <button id="btnGuardar">Nuevo</button>
+        <button id="btnCancelar">Cancelar</button>
+        <button id="btnBuscar">Buscar</button>
+        <button id="btnEliminar" class="btn-danger">Eliminar</button>
+        <br />
+        <br />
+        <div id="grdProductos"></div>
+    </form>
+</body>
+</html>

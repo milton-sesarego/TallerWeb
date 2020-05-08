@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/pedidos.js"></script>
+</head>
+<body>
+    <ul class="nav nav-tabs bg-dark mb-3">
+        <li class="nav-item"><a class="nav-link text-light" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="clientes.html">Clientes</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="pedidos.html">Pedidos</a></li>
+    </ul>
+    
+    <div class="form-group" id="myform" onsubmit="return false">
+        <div id="mainContainer" class="container">
+            <div id="alertContainer"></div>
+            <div class="row">
+                <div class="col mb-3">
+                    <h3>Pedidos</h3>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg col-md-6 col-sm-6 col-12 mb-3">
+                    <label for="selClientes" id="lblCliente">Cliente</label>
+                    <select class="form-control" id="selClientes">
+                        
+                    </select>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-12 mb-3">
+                    <label for="selProductos" id="lblProucto">Producto</label>
+                    <select class="form-control" id="selProductos">
+
+                    </select>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-12 mb-3">
+                    <label for="txtCantidad" id="lblCantidad">Cantidad</label>
+                    <input class="form-control" id="txtCantidad" type="number" />
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-12 mb-3">
+                    <fieldset disabled>
+                        <label for="txtPrecioTotal" id="lblPrecioTotal">Precio Total</label>
+                        <input class="form-control" id="txtPrecioTotal" type="number" />
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-5">
+                    <button id="btnGuardar" class="btn btn-success mr-1">Nuevo</button>
+                    <button id="btnCancelar" class="btn btn-secondary mr-1 ">Cancelar</button>
+                    <button id="btnBuscar" class="btn btn-info mr-1">Buscar</button>
+                    <button id="btnEliminar" class="btn btn-danger mr-1">Eliminar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3 text-center">
+                    <div id="grdPedidos"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>

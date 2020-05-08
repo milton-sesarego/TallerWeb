@@ -8,9 +8,9 @@ using System.Web.Http.Cors;
 using BusinessLogic;
 using Domain;
 
-namespace WebAPIClientes
+namespace WebAPI
 {
-    [EnableCors(origins: "https://localhost:44386", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProductosController : ApiController
     {
         // GET api/<controller>
@@ -20,32 +20,22 @@ namespace WebAPIClientes
         }
 
         // POST api/<controller>
-        public void Post([FromBody]Producto producto)
+        public Mensaje Post([FromBody]Producto producto)
         {
             //Para revertir que ajax transforma "" en null
-            if(producto.Nombre == null)
-            {
-                producto.Nombre = "";
-            }
-            if(producto.Descripcion == null)
-            {
-                producto.Descripcion = "";
-            }
-            ProductosManager.Guardar(producto);
+            if(producto.Nombre == null){ producto.Nombre = "";}
+            if(producto.Descripcion == null) { producto.Descripcion = "";}
+
+            return ProductosManager.Guardar(producto);
         }
 
         // PUT api/<controller>/5
-        public void Put([FromBody]Producto producto)
+        public Mensaje Put([FromBody]Producto producto)
         {
-            if (producto.Nombre == null)
-            {
-                producto.Nombre = "";
-            }
-            if (producto.Descripcion == null)
-            {
-                producto.Descripcion = "";
-            }
-            ProductosManager.Guardar(producto);
+            if (producto.Nombre == null){ producto.Nombre = "";}
+            if (producto.Descripcion == null) { producto.Descripcion = "";}
+
+            return ProductosManager.Guardar(producto);
         }
 
         // DELETE api/<controller>/5
