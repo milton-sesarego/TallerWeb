@@ -39,7 +39,7 @@ function actualizarSelects() {
     construyeSelectClientes(data);
     data = ajaxGETProductos();
     construyeSelectProductos(data)
-};
+}
 
 function ajaxGETClientes() {
     var result;
@@ -124,7 +124,7 @@ function construyeGrilla(data) {
 function actualizarGrilla() {
     var data = ajaxGETPedidosPorCliente();
     construyeGrilla(data);
-};
+}
 
 function ajaxGETPedidosPorCliente() {
     var result;
